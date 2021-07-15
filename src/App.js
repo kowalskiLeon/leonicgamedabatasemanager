@@ -1,25 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import TelaInicial from './views/TelaInicial.js'
+import MenuSuperior from './components/MenuSuperior';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Router, Route, Switch } from "react-router";
+import RouterOutlet from './utils/RouterOutlet';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  const visao = <div>
+  <MenuSuperior />
+  <RouterOutlet />
+ </div>;
+  return (visao);
 }
+
+
+
+
 
 export default App;
